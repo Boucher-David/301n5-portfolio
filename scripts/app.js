@@ -30,3 +30,4 @@ workExperience.forEach(function(articleObject){
 articles.forEach(function(job) {
   $('.work-experience').append(job.toHtml());
 });
+$('#template').hide();
