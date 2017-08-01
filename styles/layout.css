@@ -1,8 +1,7 @@
 /*
 Prefix layout styles with l- for clarity.
-They are the core structure of the website.
 
-header, footer, primary nav, aside
+id, class, media queries.
 */
 section {
   display: table;
