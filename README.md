@@ -1,11 +1,11 @@
 # 301n5-portfolio
 
-# Please look in branches for class-specific  work & progress
+#Class 03 Notes
 
-## Notes on Design
+I have been behind on class-specific work whilst trying to get my svg nav bar to work. It is now responsive and sticks to top left. Clicking on a nav (that isn't home) will hide all the nav bars and load a handlebars template into the main-content class.
 
-Clicking on any of the triangular tabs should make each tab, except for home, move up and to the left out of the screen. A mostly-opaque white background should overlay the image of my and then the content from each respective tab would then go on top.
+I've used pretty specific jQuery selectors to select the nav elements.
 
-Clicking on home would remove content, remove white background, and make tabs re-appear.
+Is it worth creating templates for the nav bars?
 
-They would be black background with white text. Undecided on font. Also unsure how to pull off the CSS to make the triangular tabs work, but I will figure it out.
+Next on the list is creating basic SMACCS styling for .main-content and working on a data template for the various handlebar templates. More to come.
