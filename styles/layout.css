@@ -8,6 +8,3 @@ section {
   /* Yes display table is a dumb way of doing this. Will fix when I spend alot of time on css*/
   margin: auto;
 }
-body {
-  background-color: #d3d3d3;
-}
