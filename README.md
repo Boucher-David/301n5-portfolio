@@ -1,6 +1,6 @@
 # 301n5-portfolio
 
-#Class 03 Notes
+# Class 03 Notes
 
 I have been behind on class-specific work whilst trying to get my svg nav bar to work. It is now responsive and sticks to top left. Clicking on a nav (that isn't home) will hide all the nav bars and load a handlebars template into the main-content class.
 
