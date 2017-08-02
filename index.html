@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>David's Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/icons.css">
     <link rel="stylesheet" href="styles/layout.css">
@@ -10,7 +11,44 @@
     </style>
   </head>
   <body>
-    <section>
+
+    <nav id="svg-nav" >
+      <svg class="svg-parent" viewBox="0 0 100 100">
+
+        <svg id="homeSVG">
+          <g>
+            <polygon points="0,0 0,20 20,0" stroke="black" stroke-width="0.1" style="fill:lime;"/>
+            <text x="-6" y="11" font-family="Verdana" font-size="4" fill="blue" transform="rotate(-45)">Home</text>
+          </g>
+        </svg>
+
+        <svg id="aboutSVG">
+          <g>
+            <polygon points="0,20 0,30 30,0 20,0" stroke="black" stroke-width="0.1" style="fill:lime;"/>
+            <text x="-6" y="19" font-family="Verdana" font-size="4" fill="blue" transform="rotate(-45)">About</text>
+          </g>
+        </svg>
+
+        <svg id="portfolioSVG">
+          <g>
+            <polygon points="0,30 0,40 40,0 30,0" stroke="black" stroke-width="0.1" style="fill:lime;"/>
+            <text x="-8" y="26" font-family="Verdana" font-size="4" fill="blue" transform="rotate(-45)">Portfolio</text>
+          </g>
+        </svg>
+
+        <svg id="socialSVG">
+          <g>
+            <polygon points="0,40 0,50 50,0 40,0" stroke="black" stroke-width="0.1" style="fill:lime;"/>
+            <text x="-6" y="33" font-family="Verdana" font-size="4" fill="blue" transform="rotate(-45)">Social</text>
+          </g>
+        </svg>
+
+
+      </svg> <!-- SVG Parent -->
+    </nav> <!-- Nav -->
+
+    <div class="main-content"></div>
+    <!-- <section>
       <h1>Welcome To David Boucher's Portfolio</h1>
       <p>Please look below for work experiences.</p>
       <p>Coming Soon: Actual content. Styling. Much wow.</p>
@@ -26,12 +64,15 @@
           <li>Sample Role 2</li>
         </ul>
       </article>
-    </section>
+    </section> -->
 
     <script type="text/javascript" src="vendor/scripts/jquery.js"></script>
-    <script type="text/javascript" src="scripts/workExperience.js"></script>
-    <script type="text/javascript" src="scripts/app.js"></script>
+    <script type="text/javascript" src="http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars-v4.0.10.js"></script>
 
+    <script type="text/javascript" src="scripts/workExperience.js"></script>
+    <script type="text/javascript" src="scripts/handlebarsHandler.js"></script>
+    <script type="text/javascript" src="scripts/app.js"></script>
+    </script>
     </script>
   </body>
 </html>
