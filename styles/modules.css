@@ -1,4 +1,13 @@
 /*
 Everything that isn't in base or layout.
-
+Reusable pieces that you can use anywhere.
 */
+
+#svg-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  z-index: 9999;
+}
