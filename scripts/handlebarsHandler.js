@@ -1,15 +1,15 @@
 function getHBTemplate(tab) {
-  $.get(`scripts/handlebarsTemplates/${tab}.hbs`, (t) => {
-
-    let template = Handlebars.compile(t);
-    $('.main-content').html(template());
-
-    // below is how to enter data into template
-    // $('.main-content').html(template(data));
+  $.getJSON(`scripts/templateJSON/${tab}.json`).done((json) => {
+    $.get(`scripts/templateRaw/${tab}.hbs`, (t) => {
+      let template = Handlebars.compile(t);
+      $('.main-content').html(template(json));
+    });
   });
 }
 
+// Load home on page load
 getHBTemplate('home');
+
 // Nav clicking. Clicking on a nav loads a different handlebars template into main content div
 $('.svg-parent svg').on('click', function(e) {
   let clickedSVG = $(this).attr('id').replace('SVG', '');
