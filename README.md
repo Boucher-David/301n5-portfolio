@@ -1,6 +1,9 @@
 # 301n5-portfolio
 
+
 # Class 04 Notes
+
+
 
 Added handlebars into my portfolio. Users can click the nav bar, and then the correct handlebars template is loaded into the #main-content div. I have created files to split CSS into SMACSS modules, although I've yet to really dig in with splitting up the code.
 
