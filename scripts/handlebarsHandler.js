@@ -3,9 +3,6 @@ function getHBTemplate(tab) {
     $.get(`scripts/templateRaw/${tab}.hbs`, (t) => {
       let template = Handlebars.compile(t);
       $('.main-content').html(template(json));
-
-      // below is how to enter data into template
-      // $('.main-content').html(template(data));
     });
   });
 }
