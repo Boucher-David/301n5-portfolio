@@ -1,1 +1,32 @@
-<h1>sdfsdfdsfsfsdfsdfs{{title}}</h1>
+<section id="{{id}}">
+  <h1>{{h1}}</h1>
+  <img src="../../images/250x250.png" alt="">
+  <p>{{aboutMe}}</p>
+  <p>{{p}}</p>
+  <section>
+    {{#each workExperience}}
+    <article data-job="{{this.company}}" class="workExperience">
+      <img "../../images/{{this.company}}.png">
+      <p>{{this.title}}</p>
+      <p>{{this.company}}</p>
+      <div>{{this.description}}</div>
+      <div>Roles:
+        <ul>
+          {{#each this.roles}}
+            <li>{{role}}</li>
+          {{/each}}
+        </ul>
+      </div>
+      <div>
+        Skills Aquired:
+        <ul>
+          {{#each this.skills}}
+            <li>skill</li>
+          {{/each}}
+        </ul>
+      </div>
+
+    </article>
+    {{/each}}
+  </section>
+</section>

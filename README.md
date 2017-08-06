@@ -1,10 +1,8 @@
 # 301n5-portfolio
 
 
-# Class 04 Notes
+# Class 05 Notes
 
+Started adding data for about me page. Started by designing (slightly) the about me page's handlebars and json template.
 
-
-Added handlebars into my portfolio. Users can click the nav bar, and then the correct handlebars template is loaded into the #main-content div. I have created files to split CSS into SMACSS modules, although I've yet to really dig in with splitting up the code.
-
-Next thing will be to come up with actual website content, alter the handlebars template to accommodate, and then put the correct data into the handlebars data JSON files.
+Next to the README should be some template images of what each tab's page should look like. I think I design better on paper vs trying to code a design. Will design mobile first.

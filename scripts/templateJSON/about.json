@@ -1,3 +1,36 @@
 {
-  "title": "About"
+  "title": "About",
+  "id":"about",
+  "h1": "About David Boucher",
+  "aboutMe": "Aspiring Developer living in Seattle. Proficient in Javascript and Python. Adept at CSS. Beginner at C++.",
+  "p": "Work Experience",
+  "workExperience": [
+    { "company": "Ookla",
+      "title": "Lazy person",
+      "roles": [
+
+      ], 
+      "skills": [
+
+      ]
+    },
+    { "company": "CDK",
+      "title": "Lazy person",
+      "roles": [
+
+      ],
+      "skills": [
+
+      ]
+    },
+    { "company": "Post Office",
+      "title": "Lazy person",
+      "roles": [
+
+      ],
+      "skills": [
+
+      ]
+    }
+  ]
 }

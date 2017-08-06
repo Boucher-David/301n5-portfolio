@@ -1,33 +1,29 @@
-function Article(work) {
-  this.title = work.title;
-  this.company = work.company;
-  this.duration = work.duration;
-  this.companyURL = work.companyURL;
-  this.roles = work.roles;
-  this.imageLink = '../images/' + this.company + '.img';
+function getHBTemplate(tab) {
+  $.getJSON(`scripts/templateJSON/${tab}.json`).done((json) => {
+    $.get(`scripts/templateRaw/${tab}.hbs`, (t) => {
+      let template = Handlebars.compile(t);
+      $('.main-content').html(template(json));
+    });
+  });
 }
 
-Article.prototype.toHtml = function () {
-  var $newArticle = $('article#template').clone();
-  $newArticle.removeAttr('id');
-  $newArticle.attr('id', this.company);
+// Load home on page load
+getHBTemplate('home');
 
-  $newArticle.find('h1').html(this.title);
-  $newArticle.find('h3').html(this.company);
-  $newArticle.find('a').attr('href', this.companyURL);
-  $newArticle.find('p').html(this.duration);
-  return $newArticle;
-}
+// Nav clicking. Clicking on a nav loads a different handlebars template into main content div
+$('.svg-parent svg').on('click', function(e) {
+  e.preventDefault();
+  let clickedSVG = $(this).attr('id').replace('SVG', '');
 
-var articles = [];
-workExperience.forEach(function(articleObject){
-  articles.push(new Article(articleObject));
+  // load template based on nav selected
+  getHBTemplate(clickedSVG);
+
+  // Hide all navs except home.
+  $('.svg-parent svg').not('#homeSVG').hide();
+
+  // clicking on home should show nav bar again.
+  if (clickedSVG === 'home' && $('.svg-parent svg').not('#homeSVG').not(':visible')) {
+    $('.svg-parent svg').not('#homeSVG').show();
+  }
+
 });
-
-
-
-
-articles.forEach(function(job) {
-  $('.work-experience').append(job.toHtml());
-});
-$('#template').hide();
