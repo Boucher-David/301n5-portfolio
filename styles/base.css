@@ -3,7 +3,9 @@ Core UI Styling. Font, base size, element styling and positioning.
 
 No class or id selections here.
 */
-
+* {
+  list-style: none;
+}
 body {
   width: 100%;
   height: 100%;
