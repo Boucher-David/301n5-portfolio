@@ -1,0 +1,22 @@
+{
+  "name": "301n5-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio Website for David Boucher",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Boucher-David/301n5-portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Boucher-David/301n5-portfolio/issues"
+  },
+  "homepage": "https://github.com/Boucher-David/301n5-portfolio#readme",
+  "dependencies": {
+    "express": "^4.15.4"
+  }
+}

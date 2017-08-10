@@ -5,6 +5,8 @@ No class or id selections here.
 */
 * {
   list-style: none;
+  font-family: europa, sans-serif;
+  font-weight: 200;
 }
 body {
   width: 100%;
