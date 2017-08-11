@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/Boucher-David/301n5-portfolio#readme",
   "dependencies": {
-    "express": "^4.15.4"
+    "express": "^4.15.3"
   }
 }
