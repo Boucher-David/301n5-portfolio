@@ -1,8 +1,8 @@
 # 301n5-portfolio
 
 
-# Class 05 Notes
+# Portfolio 06 & 07 Notes
 
-Started adding data for about me page. Started by designing (slightly) the about me page's handlebars and json template.
-
-Next to the README should be some template images of what each tab's page should look like. I think I design better on paper vs trying to code a design. Will design mobile first.
+Added Server.js and express to project 07.
+Importing JSON data into handlebars templates in templateJSON folder. Data setup is subject to change, but in general i've loaded it like we should.
+Finally, I'm playing with preloading major images. Better solution will probably be to just makes smaller images, but for now this will do.
