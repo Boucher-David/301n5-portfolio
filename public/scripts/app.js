@@ -1,5 +1,6 @@
 // replace this with IIFE that gets all templates and precompiles them.It should also potentially get all data and put them together too.
 // ()=> {}()
+// can also write it using just {}
 function getHBTemplate(tab) {
   $.getJSON(`scripts/templateJSON/${tab}.json`).done((json) => {
     $.get(`scripts/templateRaw/${tab}.hbs`, (t) => {
