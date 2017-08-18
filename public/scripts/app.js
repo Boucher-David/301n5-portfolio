@@ -7,14 +7,13 @@ let templates = [];
       $.get(`scripts/templateRaw/${tab}.hbs`, (t) => {
         let template = Handlebars.compile(t);
         templates[`${tab}SVG`] = template(json);
+        
+        // Load home on page load
         if (tab === 'home') {$('.main-content').html(templates['homeSVG']); }
       });
     });
   });
 })();
-
-
-// Load home on page load
 
 // Nav clicking. Clicking on a nav loads a different handlebars template into main content div
 $('.svg-parent svg').on('click', function(e) {
