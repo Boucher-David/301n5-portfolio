@@ -7,7 +7,7 @@ let templates = [];
       $.get(`scripts/templateRaw/${tab}.hbs`, (t) => {
         let template = Handlebars.compile(t);
         templates[`${tab}SVG`] = template(json);
-        if (tab === 'about') {$('.main-content').html(templates['aboutSVG']); }
+        if (tab === 'home') {$('.main-content').html(templates['homeSVG']); }
       });
     });
   });
