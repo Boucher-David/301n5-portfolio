@@ -23,6 +23,27 @@ header, main, footer.
 #aboutBGImage {
   width: 100%;
 }
+.workExperience {
+border-style: s3olid;
+border-color: black;
+border-left-color: pink;
+border-left-width: 5px;
+padding-left: 5px;
+}
+.workExperience p {
+  height: 40px;
+}
+
+.workExperience img {
+  width: 35%;
+  float: left;
+}
+.workExperience div {
+  display: inline-block;
+  width: 49%;
+  padding: 0;
+  margin: 0;
+}
 
 @media all and (orientation: portrait) {
   #home {
