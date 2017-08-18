@@ -1,6 +1,5 @@
 <section id="{{id}}">
-  <h1>{{h1}}</h1>
-  <img src="../../images/250x250.png" alt="">
+  <img id="aboutBGImage" src="../../images/250x250.png" alt="">
   <div>{{aboutMe}}</div>
   <section>
     {{#each workExperience}}
@@ -8,19 +7,18 @@
       <img id="companyImage" src="../../images/{{this.company}}.png">
       <p>{{this.title}}</p>
       <p>{{this.company}}</p>
-      <div>{{this.description}}</div>
-      <div>Roles:
+      <div>Roles
         <ul>
           {{#each this.roles}}
-            <li>{{role}}</li>
+            <li>{{this}}</li>
           {{/each}}
         </ul>
       </div>
       <div>
-        Skills Aquired:
+        Skills Aquired
         <ul>
           {{#each this.skills}}
-            <li>skill</li>
+            <li>{{this}}</li>
           {{/each}}
         </ul>
       </div>

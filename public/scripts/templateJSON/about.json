@@ -5,12 +5,12 @@
   "aboutMe": "Aspiring Developer living in Seattle. Proficient in Javascript and Python. Adept at CSS. Beginner at C++.",
   "workExperience": [
     { "company": "Ookla",
-      "title": "Lazy person",
+      "title": "AD Operations Specialist",
       "roles": [
-
+        "Excel", "Word", "Office"
       ],
       "skills": [
-
+        "Nothing1", "Nothing2", "Nothing3"
       ]
     }
   ]
