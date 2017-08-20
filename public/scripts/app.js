@@ -23,12 +23,11 @@ $('.svg-parent svg').on('click', function(e) {
   // load template based on nav selected
   $('.main-content').html(templates[$(this).attr('id')]);
 
-  // Hide all navs except home.
-  $('.svg-parent svg').not('#homeSVG').hide();
+  $("text", this).css('fill', '#990000').css('font-weight', 'Bold');
 
   // clicking on home should show nav bar again.
   if ($(this).attr('id') === 'homeSVG' && $('.svg-parent svg').not('#homeSVG').not(':visible')) {
     $('.svg-parent svg').not('#homeSVG').show();
   }
 
-});
+  });
