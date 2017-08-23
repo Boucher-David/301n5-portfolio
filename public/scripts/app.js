@@ -1,7 +1,8 @@
 let templates = [];
 
 // IIFE that loads templates for quick loading
-let buildTemplates = function() {
+
+(function(){
   ['home','about','portfolio','social'].forEach((tab) => {
     $.getJSON(`scripts/templateJSON/${tab}.json`).done((json) => {
       $.get(`scripts/templateRaw/${tab}.hbs`, (handleBarsTemplate) => {
@@ -12,9 +13,8 @@ let buildTemplates = function() {
       });
     });
   });
-};
-
-buildTemplates();
+})();
+console.log(templates);
 
 // Nav clicking. Clicking on a nav loads a different handlebars template into main content div
 $('.svg-parent svg').on('click', function(e) {
