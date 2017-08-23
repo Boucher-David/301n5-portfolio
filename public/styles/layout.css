@@ -32,7 +32,15 @@ header, main, footer.
   top: 90%;
   background-color: rgba(0, 0, 0, 0.5);
 }
-
+.roles {
+border-left-color: pink;
+border-left-width: 5px;
+border-left-style: solid;
+padding-left: 5px;
+}
+.roleHeader p {
+  text-align: center;
+}
 
 @media all and (orientation: portrait) {
   #home {
@@ -48,6 +56,19 @@ header, main, footer.
   }
   #aboutBGImage {
     width: 100%;
+  }
+  .roleHeader img {
+    width: 35%;
+    height: 35%;
+    float: left;
+  }
+  .roleHeader p {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 65%;
+    height: 50px;
+    margin: 0;
+    margin-bottom: 8px;
   }
 }
 

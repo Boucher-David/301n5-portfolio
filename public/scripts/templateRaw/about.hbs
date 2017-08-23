@@ -3,11 +3,13 @@
       <img id="aboutBGImage" src="../images/portraitAboutMe-min.jpg">
       <div id="aboutMe">{{aboutMe}}</div>
     </div>
+
+    {{#each workExperience}}
     <article class="roles">
-      <div id="roleHeader">
-        <img src="" alt="">
-        <p></p>
-        <p></p>
+      <div class="roleHeader">
+        <img src="../images/{{this.company}}.png" alt="">
+        <p>{{this.title}}</p>
+        <p>{{this.company}}</p>
       </div>
       <div class="roleContent">
         <p class="summary"></p>
@@ -15,5 +17,5 @@
         <p class="skills"></p>
       </div>
     </article>
-
+    {{/each}}
 </section>
