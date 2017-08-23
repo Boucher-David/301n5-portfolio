@@ -1,29 +1,19 @@
 <section id="{{id}}">
-    <div id="aboutBGImage"></div>
-    <div>{{aboutMe}}</div>
-  <section class="workExperience">
-    {{#each workExperience}}
-    <article data-job="{{this.company}}">
-      <img id="companyImage" src="../../images/{{this.company}}.png">
-      <p>{{this.title}}</p>
-      <p>{{this.company}}</p>
-      <div>Roles
-        <ul>
-          {{#each this.roles}}
-            <li>{{this}}</li>
-          {{/each}}
-        </ul>
+    <div class="aboutBG">
+      <img id="aboutBGImage" src="../images/portraitAboutMe-min.jpg">
+      <div id="aboutMe">{{aboutMe}}</div>
+    </div>
+    <article class="roles">
+      <div id="roleHeader">
+        <img src="" alt="">
+        <p></p>
+        <p></p>
       </div>
-      <div>
-        Skills Aquired
-        <ul>
-          {{#each this.skills}}
-            <li>{{this}}</li>
-          {{/each}}
-        </ul>
+      <div class="roleContent">
+        <p class="summary"></p>
+        <p class="roles"></p>
+        <p class="skills"></p>
       </div>
-
     </article>
-    {{/each}}
-  </section>
+
 </section>
