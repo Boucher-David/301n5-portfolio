@@ -8,7 +8,7 @@ let buildTemplates = function() {
         let template = Handlebars.compile(handleBarsTemplate);
         templates[`${tab}SVG`] = template(json);
 
-        if (tab === 'home') {$('.main-content').html(templates[`${tab}SVG`]); }
+        if (tab === 'about') {$('.main-content').html(templates[`${tab}SVG`]); }
       });
     });
   });

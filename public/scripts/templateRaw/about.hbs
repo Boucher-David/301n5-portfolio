@@ -1,9 +1,9 @@
 <section id="{{id}}">
-  <img id="aboutBGImage" src="../../images/250x250.png" alt="">
-  <div>{{aboutMe}}</div>
-  <section>
+    <div id="aboutBGImage"></div>
+    <div>{{aboutMe}}</div>
+  <section class="workExperience">
     {{#each workExperience}}
-    <article data-job="{{this.company}}" class="workExperience">
+    <article data-job="{{this.company}}">
       <img id="companyImage" src="../../images/{{this.company}}.png">
       <p>{{this.title}}</p>
       <p>{{this.company}}</p>
