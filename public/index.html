@@ -2,12 +2,19 @@
 <html>
   <!-- Load external scripts -->
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars-v4.0.10.js"></script>
+  <script src="/jquery/jquery.js"></script>
+  <script src="/handlebars/handlebars.js"></script>
 
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+
+
+  <!-- Preload Images -->
   <link rel="preload" as="image" href="./images/portraitMe.jpg">
-  <link rel="preload" as="image" href="./images/landscapeMe.jpg">
+  <link rel="preload" as="image" href="./images/landscapeHome-min.JPG">
+  <link rel="preload" as="image" href="./images/portraitAboutMe-min.JPG">
+  <link rel="preload" as="image" href="./images/landscapeAboutMe-min.JPG">
+
   <link rel="preload" as="image" href="./images/Ookla.png">
   <link rel="preload" as="image" href="./images/250x250.png">
 
@@ -16,6 +23,7 @@
     <title>David's Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="stylesheet" href="/styles/normalize.css">
     <link rel="stylesheet" href="/styles/base.css">
     <link rel="stylesheet" href="/styles/icons.css">
     <link rel="stylesheet" href="/styles/layout.css">
