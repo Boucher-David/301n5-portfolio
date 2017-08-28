@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-  <!-- Load external scripts -->
 
+  <!-- Load external scripts -->
   <script src="/jquery/jquery.js"></script>
   <script src="/handlebars/handlebars.js"></script>
-
+  <script src="/page/page.js"></script>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
 
@@ -70,5 +70,22 @@
     <div class="main-content"></div>
 
     <script type="text/javascript" src="/scripts/app.js"></script>
+
+    <!--page.js faux scripting -->
+    <!-- <script type="text/javascript">
+    page('/', () => {
+      console.log("This would normally call the page init script.");
+    });
+    page('/social', () => {
+      console.log("This would normally call the page init script.");
+    });
+    page('/about', () => {
+      console.log("This would normally call the page init script.");
+    });
+    page('/portfolio', () => {
+      console.log("This would normally call the page init script.");
+    });
+    page();
+    </script> -->
   </body>
 </html>
