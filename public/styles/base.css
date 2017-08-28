@@ -8,6 +8,10 @@ No class or id selections here.
   font-family: europa, sans-serif;
   font-weight: 200;
 }
+html {
+  width: 100%;
+  height: 100%;
+}
 body {
   width: 100%;
   height: 100%;
