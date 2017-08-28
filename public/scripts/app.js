@@ -1,20 +1,20 @@
 let templates = [];
 
-// IIFE that loads templates for quick loading
-(function() {
+// IIFE that loads templates for quick rendering
+{
   ['home','about','portfolio','social'].forEach((tab) => {
     $.getJSON(`scripts/templateJSON/${tab}.json`).done((json) => {
       $.get(`scripts/templateRaw/${tab}.hbs`, (t) => {
         let template = Handlebars.compile(t);
         templates[`${tab}SVG`] = template(json);
-        if (tab === 'about') {$('.main-content').html(templates['aboutSVG']); }
+
+        // load home tab when it's compiled
+        if (tab === 'home') {$('.main-content').html(templates['homeSVG']); }
       });
     });
   });
-})();
+}
 
-
-// Load home on page load
 
 // Nav clicking. Clicking on a nav loads a different handlebars template into main content div
 $('.svg-parent svg').on('click', function(e) {
