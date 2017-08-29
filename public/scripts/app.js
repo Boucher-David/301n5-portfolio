@@ -1,15 +1,24 @@
+var app = app || {}
 let templates = [];
+window.app = app;
 
+'use strict';
 // IIFE that loads templates for quick rendering
 {
-  ['home','about','portfolio','social'].forEach((tab) => {
+
+
+  app.tabs = $('.svg-parent svg').map((index, tab) => {
+    return (tab.id.replace('SVG', ''));
+  });
+
+  $.each(app.tabs, (index, tab) => {
     $.getJSON(`scripts/templateJSON/${tab}.json`).done((json) => {
       $.get(`scripts/templateRaw/${tab}.hbs`, (t) => {
         let template = Handlebars.compile(t);
         templates[`${tab}SVG`] = template(json);
 
         // load home tab when it's compiled
-        if (tab === 'home') {$('.main-content').html(templates['homeSVG']); }
+        if (tab === 'portfolio') {$('.main-content').html(templates['portfolioSVG']); }
       });
     });
   });
