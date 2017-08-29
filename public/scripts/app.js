@@ -6,6 +6,11 @@ window.app = app;
 // IIFE that loads templates for quick rendering
 {
 
+  // when we go through the github API I will update this reduce to parse that data.
+  var total = [0, 1, 2, 3].reduce(function(sum, value) {
+    return sum + value;
+  }, 0);
+  console.log(total);
 
   app.tabs = $('.svg-parent svg').map((index, tab) => {
     return (tab.id.replace('SVG', ''));
