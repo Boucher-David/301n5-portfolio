@@ -5,13 +5,6 @@ window.app = app;
 'use strict';
 // IIFE that loads templates for quick rendering
 {
-
-  // when we go through the github API I will update this reduce to parse that data.
-  var total = [0, 1, 2, 3].reduce(function(sum, value) {
-    return sum + value;
-  }, 0);
-  console.log(total);
-
   app.tabs = $('.svg-parent svg').map((index, tab) => {
     return (tab.id.replace('SVG', ''));
   });
@@ -23,10 +16,40 @@ window.app = app;
         templates[`${tab}SVG`] = template(json);
 
         // load home tab when it's compiled
-        if (tab === 'portfolio') {$('.main-content').html(templates['portfolioSVG']); }
+        if (tab === 'home') {$('.main-content').html(templates['homeSVG']); }
       });
     });
   });
+
+  // filter repo list using reduce.
+  $.ajax({
+    url: 'https://api.github.com/user/repos',
+    method: 'GET',
+    headers: {
+    'Authorization': `token ${githubToken}`
+    }
+  }).then(results => {
+    app.repos = results.map((result) => {
+      return {name: result.name, id: result.id};
+    });
+  }, error => {
+    console.log(error);
+  }).then(() => {
+    app.sortedRepos = app.repos.reduce((prev,curr) => {
+      if (!curr.name.match('android')) {
+        return prev.concat(curr);
+      } else {
+        return prev;
+      }
+    },[]);
+  }).then(() => {
+    let $repoList = $('#repoList');
+    $.each(app.sortedRepos, (repo) => {
+      $repoList.append(`<li>Repo Name: ${repo.name} || Repo ID: ${repo.id}</li>`);
+    });
+  });
+
+
 }
 
 

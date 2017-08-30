@@ -1,6 +1,8 @@
 # 301n5-portfolio
 
 
-# Portfolio 10 & 11
+# Portfolio 10 & 11 @ 12
 
-Use IIFE and Map to compile my templates. Token reduce function in there. When I complete the github API assignment I will use reduce to parse that information. 
+Completed 10, 11, and 12. I have a faux page.js setup implemented at the moment as I don't intend to actually use it within my app. It's setup how I'd imagine doing it if I were going to use it.
+
+Getting repo data from github API and using reduce() and map() on the repos to arrange and sort.
