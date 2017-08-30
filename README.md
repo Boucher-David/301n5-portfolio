@@ -1,10 +1,8 @@
 # 301n5-portfolio
 
 
-# Portfolio 10 & 11
+# Portfolio 10 & 11 @ 12
 
-IIFE used. I'd like to keep the app.js setup I currently have. Please suggest a good way to use .map() on a get request because it seems difficult. Be tough to implement the desired functions the way I have set it up.
+Completed 10, 11, and 12. I have a faux page.js setup implemented at the moment as I don't intend to actually use it within my app. It's setup how I'd imagine doing it if I were going to use it.
 
-I can re-submit if that's a big issue, but I hope you can give me a pass because of how i'm doing things.  
-
-I also handle navigation in a different way; I load templates in based on the clicks on the nav bar. I've put in commented out code for page.js setup as it should be. Hoping this is ok.
+Getting repo data from github API and using reduce() and map() on the repos to arrange and sort.
