@@ -1,6 +1,5 @@
 var app = app || {}
 let templates = [];
-window.app = app;
 
 'use strict';
 // IIFE that loads templates for quick rendering
