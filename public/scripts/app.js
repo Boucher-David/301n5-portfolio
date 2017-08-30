@@ -20,7 +20,7 @@ let templates = [];
     });
   });
 
-  // filter repo list using reduce.
+  // filter repo list using reduce. this needs to be refactored a little to combine handlebars data with this repo data.
   $.ajax({
     url: 'https://api.github.com/user/repos',
     method: 'GET',
