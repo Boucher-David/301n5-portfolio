@@ -34,11 +34,11 @@ let templates = [];
   }, error => {
     console.log(error);
   }).then(() => {
-    app.sortedRepos = app.repos.reduce((prev,curr) => {
-      if (!curr.name.match('android')) {
-        return prev.concat(curr);
+    app.sortedRepos = app.repos.reduce((previous,current) => {
+      if (!current.name.match('android')) {
+        return previous.concat(current);
       } else {
-        return prev;
+        return previous;
       }
     },[]);
   }).then(() => {
