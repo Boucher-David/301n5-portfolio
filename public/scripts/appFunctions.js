@@ -3,6 +3,7 @@
 var app = app || {}
 
 {
+  // Check each nav bar for their IDS and store for future reference.
   app.tabs = $('.svg-parent svg').map((index, tab) => {
     return (tab.id.replace('SVG', ''));
   });
@@ -10,10 +11,6 @@ var app = app || {}
   app.rawTemplates = [];
   app.rawTemplateData = [];
   app.compiledTemplates = [];
-
-  app.tabs = $('.svg-parent svg').map((index, tab) => {
-    return (tab.id.replace('SVG', ''));
-  });
 
   app.getTemplates = function(tab){
     $.get(`scripts/templateRaw/${tab}.hbs`, (template) => {
@@ -27,7 +24,7 @@ var app = app || {}
     });
   }
 
-
+  // makes use of Github API, map(), and reduce().
   app.getRepos = function(callback) {
     $.ajax({
       url: 'https://api.github.com/users/boucher-david/repos',
