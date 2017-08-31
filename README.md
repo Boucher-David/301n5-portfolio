@@ -8,6 +8,6 @@ Completed 10, 11, and 12. I have a faux page.js setup implemented at the moment 
 Getting repo data from github API and using reduce() and map() on the repos to arrange and sort.
 
 
-#Deployment URL
+# Deployment URL
 
 https://davidboucher.herokuapp.com/
