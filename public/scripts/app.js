@@ -5,7 +5,7 @@ var app = app || {}
 {
   // Functions are declared in appFunctions.js and stored in the global app space.
 
-  // loop throgh each tab
+  // loop through each tab
   $.each(app.tabs, (index, tab)=>{
 
     // load tab's template from handlebars file.
