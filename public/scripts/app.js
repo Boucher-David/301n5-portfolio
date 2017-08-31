@@ -4,50 +4,13 @@ let templates = [];
 'use strict';
 // IIFE that loads templates for quick rendering
 {
-  app.tabs = $('.svg-parent svg').map((index, tab) => {
-    return (tab.id.replace('SVG', ''));
+
+  $.each(app.tabs, (index, tab)=>{
+    app.getTemplates(tab);
+    app.getTemplateData(tab);
+  }).promise().done(() => {
+    app.getRepos(app.compileTemplates);
   });
-
-  $.each(app.tabs, (index, tab) => {
-    $.getJSON(`scripts/templateJSON/${tab}.json`).done((json) => {
-      $.get(`scripts/templateRaw/${tab}.hbs`, (t) => {
-        let template = Handlebars.compile(t);
-        templates[`${tab}SVG`] = template(json);
-
-        // load home tab when it's compiled
-        if (tab === 'home') {$('.main-content').html(templates['homeSVG']); }
-      });
-    });
-  });
-
-  // filter repo list using reduce. this needs to be refactored a little to combine handlebars data with this repo data.
-  $.ajax({
-    url: 'https://api.github.com/user/repos',
-    method: 'GET',
-    headers: {
-    'Authorization': `token ${githubToken}`
-    }
-  }).then(results => {
-    app.repos = results.map((result) => {
-      return {name: result.name, id: result.id};
-    });
-  }, error => {
-    console.log(error);
-  }).then(() => {
-    app.sortedRepos = app.repos.reduce((previous,current) => {
-      if (!current.name.match('android')) {
-        return previous.concat(current);
-      } else {
-        return previous;
-      }
-    },[]);
-  }).then(() => {
-    let $repoList = $('#repoList');
-    $.each(app.sortedRepos, (repo) => {
-      $repoList.append(`<li>Repo Name: ${repo.name} || Repo ID: ${repo.id}</li>`);
-    });
-  });
-
 
 }
 
@@ -57,7 +20,7 @@ $('.svg-parent svg').on('click', function(e) {
   e.preventDefault();
 
   // load template based on nav selected
-  $('.main-content').html(templates[$(this).attr('id')]);
+  $('.main-content').html(app.compiledTemplates[$(this).attr('id')]);
 
   // Hide all navs except home.
   $('.svg-parent svg').not('#homeSVG').hide();
