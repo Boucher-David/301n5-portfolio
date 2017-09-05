@@ -22,7 +22,7 @@ var app = app || {}
     $.getJSON(`scripts/templateJSON/${tab}.json`).done((json)=>{
       app.rawTemplateData[`${tab}SVG`] = json;
     });
-  }
+  },
 
   // makes use of Github API, map(), and reduce().
   app.getRepos = function(callback) {

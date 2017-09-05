@@ -4,14 +4,13 @@
   <!-- Load external scripts -->
   <script src="/jquery/jquery.js"></script>
   <script src="/handlebars/handlebars.js"></script>
-  <!-- <script src="/page/index.js"></script> -->
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+  <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
 
   <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
 
   <!-- Preload Images -->
   <link rel="preload" as="image" href="/images/portraitMe.jpg">
+  <link rel="preload" as="image" href="/images/landscapeHome-min.jpg">
   <link rel="preload" as="image" href="/images/portraitAboutMe-min.jpg">
 
   <link rel="preload" as="image" href="./images/Ookla.png">
@@ -54,14 +53,6 @@
           </g>
         </svg>
 
-        <svg id="socialSVG">
-          <g>
-            <polygon points="0,40 0,50 50,0 40,0"/>
-            <text x="-6" y="33">Social</text>
-          </g>
-        </svg>
-
-
       </svg> <!-- SVG Parent -->
     </nav> <!-- Nav -->
 
@@ -70,21 +61,10 @@
     <script type="text/javascript" src="/scripts/appFunctions.js"></script>
     <script type="text/javascript" src="/scripts/app.js"></script>
 
-    <!--page.js faux scripting -->
-    <!-- <script type="text/javascript">
-    page('/', () => {
-      console.log("This would normally call the page init script.");
-    });
-    page('/social', () => {
-      console.log("This would normally call the page init script.");
-    });
-    page('/about', () => {
-      console.log("This would normally call the page init script.");
-    });
-    page('/portfolio', () => {
-      console.log("This would normally call the page init script.");
-    });
+    <script type="text/javascript">
+    page('/', app.init);
+
     page();
-    </script> -->
+    </script>
   </body>
 </html>

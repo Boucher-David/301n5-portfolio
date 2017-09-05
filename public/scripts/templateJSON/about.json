@@ -6,12 +6,17 @@
   "workExperience": [
     { "company": "Ookla",
       "title": "AD Operations Specialist",
-      "roles": [
-        "Excel", "Word", "Office"
-      ],
-      "skills": [
-        "Nothing1", "Nothing2", "Nothing3"
-      ]
+      "about": "Creating, launching, testing, and analyzing avertising campaigns. Data analytics and QA testing."
+    },
+    {
+      "company": "CDK Global",
+      "title": "Project Manager",
+      "about": "PM and Advertising Specialist for Cadillac."
+    },
+    {
+      "company": "FTA Solutions",
+      "title": "Salesman",
+      "about": "Direct salesman selling LoveFilm, a UK netflix competitor."
     }
   ]
 }
