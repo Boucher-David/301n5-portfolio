@@ -128,7 +128,7 @@ font-size: 25px;
 
 @media all and (orientation: landscape) {
   #home {
-    background: url(../images/landscapeHome-min.jpg)no-repeat center center fixed;
+    background: url(../images/landscapeHomemin.jpg)no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
