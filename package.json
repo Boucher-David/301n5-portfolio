@@ -4,7 +4,8 @@
   "description": "Portfolio Website for David Boucher",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prod": "webpack -p",
+    "dev": "NODE_ENV=development  webpack-dev-server --content-base bundle/"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
     "cors": "^2.8.4",
     "dotenv": "^5.0.0",
     "express": "^4.15.3",
+    "extract-text-webpack-plugin": "^3.0.2",
     "nodemon": "^1.15.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
